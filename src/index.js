@@ -45,11 +45,13 @@ module.exports = function toReadable (number) {
     }else
     if((dig2!=0 && dig3==0) ||(dig2==1 && dig3!=0)){
       result.push(numbers[dig2.toString()+dig3])
-    }else{
-    result.push(numbers[dig2+'0']);
-    result.push(numbers[dig3])
+    }else if(dig2 != 0 && dig3!= 0){
+      result.push(numbers[dig2+'0']);
+      result.push(numbers[dig3])
     }
-  }
+    
+    }
+  
  
   if (number.length === 2){
     let dig1 = number[0];
